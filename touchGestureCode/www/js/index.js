@@ -6,24 +6,32 @@ $(document).on("pagecreate","#pageone",function(){
     	$(this).hide();
  	});                       
 
-	$('#taptext').on("tap",function(){
+	$('#swiperightpage').on("swiperight",function(){ 
+		console.log("swiperight");
+		$.mobile.navigate( "#pagetwo" );
+	
+	})
+	
+});
+
+	// -----------------------------------------
+	
+$(document).on("pagecreate","#pagetwo",function(){
+	
+		$('#swipetext').on("swiperight",function(){
+    	$(this).css('color', 'blue');
+	}) 	
+	
+		$('#taptext').on("tap",function(){
     	$(this).css('color', 'red');
  	}); 
-
-	$('#swipetext').on("swipeleft",function(){
+	
+		$('#swipetext').on("swipeleft",function(){
     	$(this).css('color', 'green');
   	})
 	
-	$('#swipetext').on("swiperight",function(){
-    	$(this).css('color', 'blue');
-	}) 
-	
-	$('#swiperightpage').on("swiperight",function(){
-		$(this).css("#pagetwo");
-	})
-	
 	$('#swipeleftpage').on("swipeleft",function(){
-		$(this).css("#pageone");
+		$.mobile.navigate( "#pageone" );
 	})
 
 
