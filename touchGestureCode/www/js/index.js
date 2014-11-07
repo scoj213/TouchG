@@ -17,6 +17,14 @@ $(document).on("pagecreate","#pageone",function(){
 	$('#swipetext').on("swiperight",function(){
     	$(this).css('color', 'blue');
 	}) 
+	
+	$('#swiperightpage').on("swiperight",function(){
+		$(this).css("#pagetwo");
+	})
+	
+	$('#swipeleftpage').on("swipeleft",function(){
+		$(this).css("#pageone");
+	})
 
 
 });
